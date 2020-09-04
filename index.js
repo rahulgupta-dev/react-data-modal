@@ -1,3 +1,3 @@
-import DataModal from './src/DataModal'
+import DataModal from './lib'
 
 export default DataModal
