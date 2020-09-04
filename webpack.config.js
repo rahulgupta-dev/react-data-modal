@@ -2,9 +2,9 @@ const path = require('path')
 module.exports = {
   entry: './index.js',
   output: {
-    path: path.join(__dirname, 'dist'),
-    filename: '[name].js',
-    sourceMapFilename: '[name].js.map',
+    path: path.resolve('lib'),
+    filename: 'index.js',
+    libraryTarget: 'commonjs2'
   },
   module: {
     rules: [
