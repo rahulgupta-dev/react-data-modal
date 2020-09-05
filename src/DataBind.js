@@ -1,5 +1,5 @@
 import React from 'react'
-class DataModal extends React.Component {
+class DataBind extends React.Component {
   constructor(props) {
     super(props)
     this.dataRef = React.createRef()
@@ -31,4 +31,4 @@ class DataModal extends React.Component {
   }
 }
 
-export default DataModal
+export default DataBind

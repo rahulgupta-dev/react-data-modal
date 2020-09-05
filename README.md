@@ -13,20 +13,44 @@ npm i react-data-bind
 # Usage
 
 ```
-<DataBind callBack={this.setState} elemType="input">
-    <input
-      type="text"
-      name="inputValue"
-      value={this.state.inputValue}
-      rg-modal="inputValue"
-    />
-</DataBind>
-<DataBind callBack={this.setState} elemType="select">
-   <select rg-modal="modal.selectVal" value={this.state.modal.selectVal}>
-      <option value="">Select something</option>
-      <option value="1">Option 1</option>
-      <option value="2">Option 2</option>
-      <option value="3">Option 3</option>
-   </select>
-</DataBind>
+import React from 'react' 
+import DataBind from 'react-data-bind' 
+class Product extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = { 
+      product: {
+        name: 'Product 1',
+      },
+      selectValue: 1,
+    }
+    this.bindData = this.bindData.bind(this)
+  }
+  bindData(partialState) {
+    this.setState(partialState)
+  }
+  render() {
+    return (
+	<div>
+	<DataBind callBack={this.bindData} elemType="input">
+		<input
+		  type="text"
+		  name="product.name"
+		  value={this.state.product.name}
+		  rg-modal="product.name"
+		/>
+	</DataBind>
+	<DataBind callBack={this.bindData} elemType="select">
+	   <select rg-modal="selectValue" value={this.state.selectValue}>
+		  <option value="">Select something</option>
+		  <option value="1">Option 1</option>
+		  <option value="2">Option 2</option>
+		  <option value="3">Option 3</option>
+	   </select>
+	</DataBind>
+	</div>)
+  }
+}
+export default Product
+
 ```

@@ -1,6 +1,6 @@
 {
   "name": "react-data-bind",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Two way data binding",
   "main": "index.js",
   "repository": {
@@ -9,10 +9,8 @@
   },
   "keywords": [
     "datamodal",
-    "two",
-    "way",
-    "data",
-    "binding"
+    "twoway",
+    "databinding"
   ],
   "author": "Rahul Gupta",
   "license": "MIT",
