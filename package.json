@@ -1,7 +1,7 @@
 {
-  "name": "react-data-modal",
+  "name": "react-data-bind",
   "version": "1.0.0",
-  "description": "Two way data binding ",
+  "description": "Two way data binding",
   "main": "index.js",
   "repository": {
     "type": "git",
