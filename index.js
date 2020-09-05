@@ -1,3 +1,3 @@
-import DataModal from './lib'
+import DataBind from './lib'
 
-export default DataModal
+export default DataBind

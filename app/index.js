@@ -1,3 +1,3 @@
-import DataModal from '../src/DataModal'
+import DataBind from '../src/DataBind'
 
-export default DataModal
+export default DataBind
