@@ -1,7 +1,7 @@
 const path = require('path')
 module.exports = {
   mode: 'production',
-  entry: './index.js',
+  entry: './app/index.js',
   output: {
     path: path.resolve('lib'),
     filename: 'index.js',

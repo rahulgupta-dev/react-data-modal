@@ -1,19 +1,19 @@
 import React from 'react'
-
+import PropTypes from 'prop-types'
 class DataModal extends React.Component {
   constructor(props) {
     super(props)
     this.dataRef = React.createRef()
-    this._parent = props._this
+    this.callBack = props.callBack
   }
 
   render() {
     return <div ref={this.dataRef}>{this.props.children}</div>
   }
   componentDidMount() {
-    const { inputType } = this.props
+    const { elemType } = this.props
     const inputElem = this.dataRef.current.querySelector(
-      `${inputType}[rg-modal]`
+      `${elemType}[rg-modal]`
     )
     if (inputElem) {
       const _modal = inputElem.getAttribute('rg-modal')
@@ -26,10 +26,15 @@ class DataModal extends React.Component {
             return Object.assign({}, { [cur]: acc })
           }
         }, {})
-        this._parent['setState'](dataState)
+        this.callBack(dataState)
       })
     }
   }
 }
-
+DataModal.propTypes = {
+  children: PropTypes.element.isRequired,
+  inputType: PropTypes.string.isRequired,
+  'rg-modal': PropTypes.string.isRequired,
+  callBack: PropTypes.func.isRequired,
+}
 export default DataModal
