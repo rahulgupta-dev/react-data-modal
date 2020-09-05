@@ -1,9 +1,14 @@
-# react-data-modal
+# react-data-bind
 
-Two way data binding for react components
+Two way data binding for react components.
+No need to write listener for each input element to set the state.
 
 # Installation 
-npm i react-data-modal
+
+```
+npm install react-data-bind
+npm i react-data-bind
+```
 
 # Usage
 
